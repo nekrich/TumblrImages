@@ -1,0 +1,64 @@
+
+included: # paths to include during linting. `--path` is ignored if present.
+  - TumblrImages
+  - Sources
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+
+disabled_rules:
+  - opening_brace
+  - vertical_parameter_alignment
+  - closure_end_indentation
+  - implicitly_unwrapped_optional
+  - no_extension_access_modifier
+  - file_header
+  - force_cast
+  - force_unwrapping
+  
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+  - conditional_returns_on_newline
+  - private_outlet
+  - redundant_nil_coalesing
+  - trailing_whitespace
+  - closure_spacing
+  - explicit_init
+  - redundant_nil_coalescing
+  - nimble_operator
+  - overridden_super_call
+  - number_separator
+  - attributes
+  - operator_usage_whitespace
+  - prohibited_super_call
+  - switch_case_on_newline
+  - first_where
+  - object_literal
+  - explicit_type_interface
+  - fatal_error_message
+  - large_tuple
+  - explicit_top_level_acl
+  - extension_access_modifier
+  - implicit_return
+
+force_cast: warning # implicitly
+
+force_try:
+  severity: warning
+
+private_outlet:
+  allow_private_set: true
+
+line_length: 130
+
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true
+
+identifier_name:
+  min_length: # only min_length
+    error: 3 # only error
+
+colon:
+  apply_to_dictionaries: false
