@@ -1,0 +1,17 @@
+/* 
+  TumblrImages.TumblrAPI.Error.strings
+  TumblrImages
+
+  Created by Vitalii Budnik on 9/7/17.
+  Copyright © 2017 Vitalii Budnik. All rights reserved.
+*/
+
+"cantBuildURL.Description" = "App error";
+"noDataInResponse.Description" = "Server error";
+"responseIsNotAValidDictionary.Description" = "Server error";
+"noResponseKey.Description" = "Server error";
+
+"cantBuildURL.FailureReason" = "Can't build URL for request";
+"noDataInResponse.FailureReason" = "No data in response";
+"responseIsNotAValidDictionary.FailureReason" = "Server returned not valid data";
+"noResponseKey.FailureReason" = "Server returned not valid data";
