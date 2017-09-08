@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		686E5DBE1F62705A00DB8B56 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686E5DBD1F62705A00DB8B56 /* String+Localized.swift */; };
 		687B7F2D1F6135F400BA803C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687B7F2C1F6135F400BA803C /* AppDelegate.swift */; };
 		687B7F321F6135F400BA803C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687B7F301F6135F400BA803C /* Main.storyboard */; };
 		687B7F341F6135F400BA803C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687B7F331F6135F400BA803C /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		686E5DBD1F62705A00DB8B56 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		687B7F291F6135F400BA803C /* TumblrImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687B7F2C1F6135F400BA803C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		687B7F311F6135F400BA803C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		687B7F4F1F61633300BA803C /* TumblrAPI.Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TumblrAPI.Error.swift; sourceTree = "<group>"; };
 		687B7F571F61686C00BA803C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		687B7F5A1F61687200BA803C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TumblrImages.TumblrAPI.Error.strings; sourceTree = "<group>"; };
-		687B7F5D1F61744100BA803C /* TubmlrImagesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TubmlrImagesDataSource.swift; path = TubmlrImagesDataSource.swift; sourceTree = "<group>"; };
+		687B7F5D1F61744100BA803C /* TubmlrImagesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TubmlrImagesDataSource.swift; sourceTree = "<group>"; };
 		687B7F601F61966A00BA803C /* FileManager+Uitlity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Uitlity.swift"; sourceTree = "<group>"; };
 		687B7F631F6196C700BA803C /* RemoteFileCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteFileCache.swift; sourceTree = "<group>"; };
 		687B7F651F6196F300BA803C /* RemoteFileCacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteFileCacheProtocol.swift; sourceTree = "<group>"; };
@@ -136,11 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				687B7F421F61367900BA803C /* Result.swift */,
+				687B7F4B1F613FD200BA803C /* APISourceProtocol.swift */,
+				687B7F4D1F61404800BA803C /* TumblrAPISource.swift */,
 				687B7F401F61361F00BA803C /* APIProtocol.swift */,
 				687B7F471F613D5800BA803C /* TumblrAPI.swift */,
 				687B7F4F1F61633300BA803C /* TumblrAPI.Error.swift */,
-				687B7F4B1F613FD200BA803C /* APISourceProtocol.swift */,
-				687B7F4D1F61404800BA803C /* TumblrAPISource.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -180,6 +182,7 @@
 			children = (
 				687B7F601F61966A00BA803C /* FileManager+Uitlity.swift */,
 				687B7F6B1F61A68800BA803C /* UIImage+Scale.swift */,
+				686E5DBD1F62705A00DB8B56 /* String+Localized.swift */,
 				687B7F831F61D1C500BA803C /* UIView+AddSubview.swift */,
 				687B7F871F61D22D00BA803C /* Protocols */,
 			);
@@ -391,6 +394,7 @@
 				687B7F791F61BC8C00BA803C /* PostWithImageTableViewCell.swift in Sources */,
 				687B7F6E1F61AF9700BA803C /* ImagesListViewController.swift in Sources */,
 				687B7F461F61371100BA803C /* PostWithImageURLProtocol.swift in Sources */,
+				686E5DBE1F62705A00DB8B56 /* String+Localized.swift in Sources */,
 				687B7F2D1F6135F400BA803C /* AppDelegate.swift in Sources */,
 				687B7F4C1F613FD200BA803C /* APISourceProtocol.swift in Sources */,
 				687B7F501F61633300BA803C /* TumblrAPI.Error.swift in Sources */,
