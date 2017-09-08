@@ -8,24 +8,6 @@
 
 import Foundation
 
-extension String {
-	
-	func localized(
-		using tableName: String = "Localized",
-		in bundle: Bundle = .main,
-		value: String? = .none,
-		comment: String = "")
-		-> String
-	{
-		return NSLocalizedString(self,
-		                         tableName: tableName,
-		                         bundle: bundle,
-		                         value: value ?? self,
-		                         comment: comment)
-	}
-	
-}
-
 extension TumblrAPI {
 	
 	enum Error: Swift.Error, LocalizedError {

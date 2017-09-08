@@ -15,13 +15,34 @@ internal struct TumblrPost: PostWithImagesURLsProtocol {
 	init?(json: [String : Any]) {
 		
 		guard
-			let photosJSON = json["photos"] as? [[String : Any]]
+			let allPhotosJSON = json["photos"] as? [[String : Any]]
 			else {
 				return nil
 		}
 		
-		let orignalsJSON = photosJSON.flatMap { $0["original_size"] as? [String : Any] }
-		let urls: [String] = orignalsJSON.flatMap { $0["url"] as? String }
+		let photosJSON = allPhotosJSON.flatMap { (photo) -> [String : Any]? in
+			if let originalSizes = photo["original_size"] as? [String : Any] {
+				return originalSizes
+			}
+			guard let altSizes = photo["alt_sizes"] as? [[String : Any]]
+				else {
+					return .none
+			}
+			var maxWidth = 0
+			var maxPoto: [String : Any]? = .none
+			altSizes.forEach { (altSizePhoto) in
+				guard let width = altSizePhoto["width"] as? Int
+					else {
+						return
+				}
+				if width > maxWidth {
+					maxWidth = width
+					maxPoto = altSizePhoto
+				}
+			}
+			return maxPoto
+		}
+		let urls: [String] = photosJSON.flatMap { $0["url"] as? String }
 		
 		self.originalImagesURLsString = urls
 		

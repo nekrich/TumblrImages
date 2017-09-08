@@ -93,6 +93,7 @@ internal class ImagesListViewController: UIViewController {
 		
 		stateView.state = .loading
 		showStateView()
+		dataSource = .none
 		TumblrAPI.default().fetchImagesInfo(tagged: tag) { [weak self] (result) in
 			guard let posts = result.value
 				else {
